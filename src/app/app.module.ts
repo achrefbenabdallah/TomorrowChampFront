@@ -11,6 +11,7 @@ import { ErrorComponent } from './error/error.component';
 import { JoueurComponent } from './joueur/joueur.component';
 import { ScoutComponent } from './scout/scout.component';
 import { FormsModule } from '@angular/forms';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     ErrorComponent,
     JoueurComponent,
-    ScoutComponent
+    ScoutComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
