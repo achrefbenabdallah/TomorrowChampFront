@@ -1,17 +1,21 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { LoginComponent } from './login/login.component';
-import { HomeComponent } from './home/home.component';
-import { ErrorComponent } from './error/error.component';
-import { JoueurComponent } from './joueur/joueur.component';
-import { ScoutComponent } from './scout/scout.component';
-import { FormsModule } from '@angular/forms';
-import { LogoutComponent } from './logout/logout.component';
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { HeaderComponent } from "./header/header.component";
+import { FooterComponent } from "./footer/footer.component";
+import { LoginComponent } from "./login/login.component";
+import { HomeComponent } from "./home/home.component";
+import { ErrorComponent } from "./error/error.component";
+import { JoueurComponent } from "./joueur/joueur.component";
+import { ScoutComponent } from "./scout/scout.component";
+import { FormsModule } from "@angular/forms";
+import { LogoutComponent } from "./logout/logout.component";
+import { HttpClientModule } from "@angular/common/http";
+import { MatchesComponent } from './matches/matches.component';
+import { MatchComponent } from './match/match.component';
+import { RegisterJoueurComponent } from './register-joueur/register-joueur.component';
 
 @NgModule({
   declarations: [
@@ -23,14 +27,13 @@ import { LogoutComponent } from './logout/logout.component';
     ErrorComponent,
     JoueurComponent,
     ScoutComponent,
-    LogoutComponent
+    LogoutComponent,
+    MatchesComponent,
+    MatchComponent,
+    RegisterJoueurComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

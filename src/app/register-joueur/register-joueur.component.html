@@ -1,0 +1,48 @@
+<h1>Create Joueur</h1>
+
+<div class="container">
+  <form (ngSubmit)="createJoueur()" #joueurForm="ngForm">
+    <fieldset>
+      <label>Nom</label>
+      <input type="text" class="form-control" #nom="ngModel" required="required" [(ngModel)]="joueur.nom" name="nom" />
+    </fieldset>
+
+    <fieldset>
+      <label>prenom</label>
+      <input type="text" class="form-control" #prenom="ngModel" required="required" [(ngModel)]="joueur.prenom"
+        name="prenom" />
+    </fieldset>
+
+    <fieldset>
+      <label>adresse</label>
+      <input type="text" class="form-control" #adresse="ngModel" required="required" [(ngModel)]="joueur.adresse"
+        name="adresse" />
+    </fieldset>
+
+    <fieldset>
+      <label>role</label>
+      <input type="text" class="form-control" #role="ngModel" required="required" [(ngModel)]="joueur.role" value="JOUEUR" 
+        name="role" readonly />
+    </fieldset>
+
+    <fieldset>
+      <label>password</label>
+      <input type="password" class="form-control" #password="ngModel" required="required" [(ngModel)]="joueur.password"
+        name="password" />
+    </fieldset>
+
+    <fieldset>
+      <label>nationalite</label>
+      <input type="text" class="form-control" #nationalite="ngModel" required="required"
+        [(ngModel)]="joueur.nationalite" name="nationalite" />
+    </fieldset>
+
+    <fieldset>
+      <input type="checkbox" #disponibilite="ngModel" value="disponible" [(ngModel)]="joueur.disponibilite"
+        name="disponibilite" checked />
+      <label for="disponible"> disponible</label><br />
+    </fieldset>
+
+    <button type="submit" class="btn btn-primary">create</button>
+  </form>
+</div>

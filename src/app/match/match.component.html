@@ -1,0 +1,14 @@
+<h1>Create Match</h1>
+
+<div class="container">
+<form (ngSubmit)="createMatch()" #todoForm="ngForm">
+  <fieldset>
+    <label>Stade</label>
+    <input type="text" class="form-control" #stade="ngModel" 
+    required="required" [(ngModel)]="match.stade" name="stade">
+  </fieldset>
+
+
+  <button type="submit" class="btn btn-primary" >create</button>
+</form>
+</div>

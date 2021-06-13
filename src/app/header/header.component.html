@@ -18,10 +18,14 @@
         <li class="nav-item">
           <a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()" class="nav-link" routerLink="/scout">Scouts</a>
         </li>
+        <li class="nav-item">
+          <a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()" class="nav-link" routerLink="/partie">Parties</a>
+        </li>
       </ul>
       <ul class="navbar-nav navbar-collapse justify-content-end">
         <li><a *ngIf="!hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/login" class="nav-link">Login</a></li>
         <li><a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/logout" class="nav-link">Logout</a></li>
+        <li><a *ngIf="!hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/registerjoueur" class="nav-link">Register</a></li>
       </ul>
       <!--<form class="d-flex">
         <input class="form-control me-sm-2" type="text" placeholder="Search">

@@ -1,1 +1,37 @@
 <h1>Liste des joueurs</h1>
+<div class="container">
+  <table class="table table-hover">
+    <thead>
+      <th>Nom</th>
+      <th>Adresse</th>
+      <th>Prenom</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of players">
+        <td>{{ p.nom }}</td>
+        <td>{{ p.adresse }}</td>
+        <td>{{ p.prenom }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <button (click)="getListPlayers()" class="btn btn-primary">
+    Get Players
+  </button>
+</div>
+
+<div class="row">
+  <form #formJoueur="ngForm">
+    <label>Nom</label>
+    <input type="text" id="nom" class="formcontrol" [ngModel] name="nom">
+
+    <label>adresse</label>
+    <input type="text" id="adresse" class="formcontrol" [ngModel] name="adresse">
+
+    <button type="button" class="btn btn-success" (click)="addJoueur(joueur)">
+      Add
+    </button>
+    <button type="button" class="btn btn-primary" (click)="closeForm()">
+      Cancel
+    </button>
+  </form>
+</div>
