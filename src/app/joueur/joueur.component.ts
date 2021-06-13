@@ -11,7 +11,7 @@ import { PlayersDataService } from '../service/data/players-data.service';
   styleUrls: ['./joueur.component.css']
 })
 export class JoueurComponent implements OnInit {
-  id: number
+  id: any
   name:string
   joueur: Joueur
   caracteristique : Caracteristique
@@ -56,8 +56,8 @@ export class JoueurComponent implements OnInit {
 
   goCaracteristiqueDetails(id:any,name:any) {
 
-    //console.log("carac "+`${id}`)
-    return this.router.navigate(['caracteristique/', { id, name }])
+    console.log("carac "+`${id}`)
+    return this.router.navigate(['caracteristique/:id/:name', { id, name }])
     
   }
 

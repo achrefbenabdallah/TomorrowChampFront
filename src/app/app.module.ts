@@ -20,6 +20,8 @@ import { RegisterScoutComponent } from './register-scout/register-scout.componen
 import { RegisterComponent } from './register/register.component';
 import { CaracteristiqueComponent } from './caracteristique/caracteristique.component';
 
+import { AddCaracteristiqueComponent } from './add-caracteristique/add-caracteristique.component';
+
 
 
 @NgModule({
@@ -39,6 +41,7 @@ import { CaracteristiqueComponent } from './caracteristique/caracteristique.comp
     RegisterScoutComponent,
     RegisterComponent,
     CaracteristiqueComponent,
+    AddCaracteristiqueComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],

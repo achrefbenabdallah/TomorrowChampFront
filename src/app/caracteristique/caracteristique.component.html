@@ -1,16 +1,18 @@
-<button (click)="GoBack()" class="btn btn-primary">
+<button (click)="GoBack()" class="btn btn-success">
   Go Back
 </button>
   
-  <h1>{{name}} Caracteristique : </h1>
+ 
 <div class="card" style="width: 18rem;">
   <img src="../../assets/img/carac" class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h5 class="card-title">{{name}} Skills : </h5>
+    <p class="card-text">
+      </p>
   </div>
 
-    <div><button (click)=getCaracteristiqueById(id) class="btn btn-secondary">click hereeeeeeeee </button></div>
+    <div><button (click)=getCaracteristiqueById(id) class="btn btn-secondary">Show Skills</button>
+         &nbsp;<button (click)=setJoueurInScout() class="btn btn-secondary" >recruit</button></div>
     <div *ngIf = test>
       <ul class="list-group">
         <li class="list-group-item"> tir : {{carac.tir}}</li>
@@ -25,18 +27,8 @@
         <li class="list-group-item">dribble : {{carac.dribble}}</li>
         <li class="list-group-item">pass : {{carac.pass}}</li>
       </ul>
-
-    </div>
-   
-<!--************************************************************************-->
-<!-- Button trigger modal -->
+    </div>  
+</div><div><br><br></div>
 
 
 
-<!--************************************************************************-->
-  <div class="card-body">
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
-  </div>
-  
-</div>

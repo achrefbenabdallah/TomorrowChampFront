@@ -1,5 +1,6 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
+import { AddCaracteristiqueComponent } from "./add-caracteristique/add-caracteristique.component";
 import { CaracteristiqueComponent } from "./caracteristique/caracteristique.component";
 import { ErrorComponent } from "./error/error.component";
 import { HomeComponent } from "./home/home.component";
@@ -26,7 +27,7 @@ const routes: Routes = [
   { path: "registerjoueur", component: RegisterJoueurComponent },
   { path: "registerscout", component: RegisterScoutComponent },
   { path: "register", component: RegisterComponent },
-  { path: "caracteristique", component: CaracteristiqueComponent, canActivate: [RouteGuardService] },
+  { path: "addcaracteristique", component: AddCaracteristiqueComponent, canActivate: [RouteGuardService] },
   { path: "caracteristique/:id/:name", component: CaracteristiqueComponent, canActivate: [RouteGuardService] },
   { path: "**", component: ErrorComponent },
 ];

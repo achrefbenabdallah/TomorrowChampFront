@@ -31,6 +31,12 @@ export class PlayersDataService {
     return this.http.get(`${this.URL}${id}`)
   }
 
+  setScoutInJoueur(idjoueur,idscout:any,data:any) {
+    return this.http.put(`${this.URL}${idjoueur}${idscout}`,data)
+  }
+
+  
+
   
 
   /*createBasicAuthenticationHeader() {

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Joueur } from '../models/joueur';
 import { PlayersDataService } from '../service/data/players-data.service';
+import { HardcodedAuthenticationService } from '../service/hardcoded-authentication.service';
 
 @Component({
   selector: 'app-register-joueur',
@@ -13,7 +14,8 @@ export class RegisterJoueurComponent implements OnInit {
 
   constructor(
     private serviceJoueur: PlayersDataService,
-    private router:Router
+    private router: Router,
+    private auth:HardcodedAuthenticationService
   ) { }
 
   ngOnInit() {
@@ -28,7 +30,12 @@ export class RegisterJoueurComponent implements OnInit {
   createJoueur(joueur:any)  {
    
       this.serviceJoueur.addPlayer(this.joueur).subscribe(
-        response=> console.log(response)
+        response => console.log(response),
+        () => { },
+        () => {
+          this.router.navigate(['addcaracteristique'])
+          this.auth.authenticate('achref','')
+        }
       )
   }
 
