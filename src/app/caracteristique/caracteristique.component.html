@@ -1,0 +1,42 @@
+<button (click)="GoBack()" class="btn btn-primary">
+  Go Back
+</button>
+  
+  <h1>{{name}} Caracteristique : </h1>
+<div class="card" style="width: 18rem;">
+  <img src="../../assets/img/carac" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+
+    <div><button (click)=getCaracteristiqueById(id) class="btn btn-secondary">click hereeeeeeeee </button></div>
+    <div *ngIf = test>
+      <ul class="list-group">
+        <li class="list-group-item"> tir : {{carac.tir}}</li>
+        <li class="list-group-item">pied Fort : {{carac.piedfort}}</li>
+        <li class="list-group-item">précision : {{carac.precisions}}</li>
+        <li class="list-group-item">hauteur : {{carac.hauteur}}</li>
+        <li class="list-group-item">poids : {{carac.poids}}</li>
+        <li class="list-group-item">physique : {{carac.physique}}</li>
+        <li class="list-group-item">vitesse : {{carac.vitesse}}</li>
+        <li class="list-group-item">defense : {{carac.defense}}</li>
+        <li class="list-group-item">attaque : {{carac.attaque}}</li>
+        <li class="list-group-item">dribble : {{carac.dribble}}</li>
+        <li class="list-group-item">pass : {{carac.pass}}</li>
+      </ul>
+
+    </div>
+   
+<!--************************************************************************-->
+<!-- Button trigger modal -->
+
+
+
+<!--************************************************************************-->
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+  
+</div>

@@ -27,6 +27,10 @@ export class PlayersDataService {
     return this.http.post(`${this.URL}`,joueur)
   }
 
+  getPlayerById(id: any) {
+    return this.http.get(`${this.URL}${id}`)
+  }
+
   
 
   /*createBasicAuthenticationHeader() {

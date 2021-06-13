@@ -1,0 +1,41 @@
+<button (click)="GoBack()" class="btn btn-primary">
+  Go Back
+</button>
+<h1>Sign Up as Scout</h1>
+
+<div class="container">
+  <form (ngSubmit)="addScout()" #scoutForm="ngForm">
+    <fieldset>
+      <label>Nom</label>
+      <input type="text" class="form-control" #nom="ngModel" required="required" [(ngModel)]="scout.nom" name="nom" />
+    </fieldset>
+
+    <fieldset>
+      <label>prenom</label>
+      <input type="text" class="form-control" #prenom="ngModel" required="required" [(ngModel)]="scout.prenom"
+        name="prenom" />
+    </fieldset>
+
+    <fieldset>
+      <label>adresse</label>
+      <input type="text" class="form-control" #adresse="ngModel" required="required" [(ngModel)]="scout.email"
+        name="email" />
+    </fieldset>
+
+    <fieldset>
+      <label>role</label>
+      <input type="text" class="form-control" #role="ngModel" required="required" [(ngModel)]="scout.role" value="SCOUT" placeholder="SCOUT"
+        name="role" readonly />
+    </fieldset>
+
+    <fieldset>
+      <label>password</label>
+      <input type="password" class="form-control" #password="ngModel" required="required" [(ngModel)]="scout.password"
+        name="password" />
+    </fieldset>
+
+ 
+
+    <button type="submit" class="btn btn-primary">create</button>
+  </form>
+</div>

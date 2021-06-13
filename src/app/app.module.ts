@@ -16,6 +16,11 @@ import { HttpClientModule } from "@angular/common/http";
 import { MatchesComponent } from './matches/matches.component';
 import { MatchComponent } from './match/match.component';
 import { RegisterJoueurComponent } from './register-joueur/register-joueur.component';
+import { RegisterScoutComponent } from './register-scout/register-scout.component';
+import { RegisterComponent } from './register/register.component';
+import { CaracteristiqueComponent } from './caracteristique/caracteristique.component';
+
+
 
 @NgModule({
   declarations: [
@@ -31,6 +36,9 @@ import { RegisterJoueurComponent } from './register-joueur/register-joueur.compo
     MatchesComponent,
     MatchComponent,
     RegisterJoueurComponent,
+    RegisterScoutComponent,
+    RegisterComponent,
+    CaracteristiqueComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],

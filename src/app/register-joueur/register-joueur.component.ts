@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Joueur } from '../models/joueur';
 import { PlayersDataService } from '../service/data/players-data.service';
 
@@ -11,7 +12,8 @@ export class RegisterJoueurComponent implements OnInit {
   joueur: Joueur = new Joueur();
 
   constructor(
-    private serviceJoueur:PlayersDataService
+    private serviceJoueur: PlayersDataService,
+    private router:Router
   ) { }
 
   ngOnInit() {
@@ -28,6 +30,10 @@ export class RegisterJoueurComponent implements OnInit {
       this.serviceJoueur.addPlayer(this.joueur).subscribe(
         response=> console.log(response)
       )
+  }
+
+  GoBack() {
+    return this.router.navigate(['register'])
   }
   
 
