@@ -4,15 +4,12 @@
     <thead>
       <th>stade</th>
       <th>Actions</th>
-     
     </thead>
     <tbody>
       <tr *ngFor ='let p of parties'>
         <td>{{p.stade}}</td>
-        <td>Participate</td>
-        
-       
-
+        <td><button class="btn btn-success">Participate</button> &nbsp;
+          <button (click)=deleteMatch(p.id) class="btn btn-danger">Delete</button></td>
       </tr>
     </tbody>
   </table>

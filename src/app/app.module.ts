@@ -21,6 +21,7 @@ import { RegisterComponent } from './register/register.component';
 import { CaracteristiqueComponent } from './caracteristique/caracteristique.component';
 
 import { AddCaracteristiqueComponent } from './add-caracteristique/add-caracteristique.component';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
 
 
@@ -42,6 +43,7 @@ import { AddCaracteristiqueComponent } from './add-caracteristique/add-caracteri
     RegisterComponent,
     CaracteristiqueComponent,
     AddCaracteristiqueComponent,
+    EditProfileComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],

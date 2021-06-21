@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Match } from '../models/match';
 import { MatchesDataService } from '../service/data/matches-data.service';
 import { PlayersDataService } from '../service/data/players-data.service';
@@ -14,7 +15,8 @@ export class MatchComponent implements OnInit {
   listplayers: any;
 
   constructor(private serviceJoueur: PlayersDataService,
-  private serviceMatch:MatchesDataService) { }
+    private serviceMatch: MatchesDataService,
+    private router:Router) { }
 
   ngOnInit() { }
 
@@ -25,9 +27,17 @@ export class MatchComponent implements OnInit {
   }
 
   createMatch(match: any) {
-    return this.serviceMatch.createPartie(this.match).subscribe(
-      response=> console.log(response)
+     this.serviceMatch.createPartie(this.match).subscribe(
+      response => console.log(response),
+      () => { },
+      ()=>  this.router.navigate['/partie']
     )
   }
+
+  GoBack() {
+    return this.router.navigate(['partie'])
+  }
+
+
   
 }

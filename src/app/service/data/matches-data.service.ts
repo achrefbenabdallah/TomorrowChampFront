@@ -19,4 +19,8 @@ export class MatchesDataService {
   createPartie(partie: any) :Observable<Object>{
     return this.http.post(`${this.URL}`, partie)
   }
+
+  deletePartie(id: any) {
+    return this.http.delete(`${this.URL}/${id}`)
+  }
 }

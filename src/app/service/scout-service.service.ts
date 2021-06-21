@@ -13,4 +13,8 @@ export class ScoutServiceService {
   addScout(scout: any) {
     return this.http.post(`${this.URL}`,scout)
   }
+
+  getAllScouts() {
+    return this.http.get("http://localhost:8090/api/scouts")
+  }
 }

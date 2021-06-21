@@ -24,8 +24,20 @@ export class MatchesComponent implements OnInit {
     )
   }
 
+  deleteMatch(id: any) {
+    return this.matcheService.deletePartie(id).subscribe(
+      response => response,
+      () => { },
+      
+    )
+
+    
+  }
+
   addMatch() {
     return this.router.navigate(['/match'])
   }
+
+ 
 
 }

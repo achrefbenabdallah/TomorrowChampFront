@@ -1,0 +1,18 @@
+
+.get-started .get-box {
+	display: inline-block;
+	    background: url(../../assets/img/Rounded-Box-Bg.png);
+	    vertical-align: top;
+	    padding: 15px 0;
+	    margin: 0 10px 20px;
+	    min-height: 310px;
+	    width: 260px;
+	    background-size: cover;
+}
+.join-index{
+	background:url('../../assets/img/bg1.jpg') no-repeat fixed center; margin: 0px 0 !important; border-top:1px #57B55A solid;background-size: cover;
+}
+
+.service-providers{
+	z-index:20; width:100%;  position:absolute !important; top:70px;
+}

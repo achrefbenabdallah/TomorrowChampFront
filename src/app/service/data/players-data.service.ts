@@ -27,6 +27,14 @@ export class PlayersDataService {
     return this.http.post(`${this.URL}`,joueur)
   }
 
+  updatePlayer(id: any,data:any) {
+    return this.http.put(`${this.URL}`,data)
+  }
+
+  deletePlayer(id: any) {
+    return this.http.delete(`${this.URL}${id}`)
+  }
+
   getPlayerById(id: any) {
     return this.http.get(`${this.URL}${id}`)
   }

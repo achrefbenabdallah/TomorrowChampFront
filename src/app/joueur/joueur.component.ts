@@ -14,7 +14,8 @@ export class JoueurComponent implements OnInit {
   id: any
   name:string
   joueur: Joueur
-  caracteristique : Caracteristique
+  caracteristique: Caracteristique
+ 
 
   players : any
   constructor(
@@ -60,5 +61,11 @@ export class JoueurComponent implements OnInit {
     return this.router.navigate(['caracteristique/:id/:name', { id, name }])
     
   }
+
+ /* deletejoueur(id: any) {
+    this.service.deletePlayer(id).subscribe(
+      response => response,
+    )
+  }*/
 
 }

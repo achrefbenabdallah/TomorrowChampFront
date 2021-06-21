@@ -2,6 +2,7 @@ import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { AddCaracteristiqueComponent } from "./add-caracteristique/add-caracteristique.component";
 import { CaracteristiqueComponent } from "./caracteristique/caracteristique.component";
+import { EditProfileComponent } from "./edit-profile/edit-profile.component";
 import { ErrorComponent } from "./error/error.component";
 import { HomeComponent } from "./home/home.component";
 import { JoueurComponent } from "./joueur/joueur.component";
@@ -29,6 +30,7 @@ const routes: Routes = [
   { path: "register", component: RegisterComponent },
   { path: "addcaracteristique", component: AddCaracteristiqueComponent, canActivate: [RouteGuardService] },
   { path: "caracteristique/:id/:name", component: CaracteristiqueComponent, canActivate: [RouteGuardService] },
+  { path: "editProfile", component: EditProfileComponent, canActivate: [RouteGuardService] },
   { path: "**", component: ErrorComponent },
 ];
 
